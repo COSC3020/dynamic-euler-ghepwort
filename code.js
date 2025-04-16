@@ -1,9 +1,9 @@
-function factorial(n) {
-    if(n === 0) return 1;
-    else return n * factorial(n - 1);
-}
-
 function e(n) {
-    if(n === 0) return 1;
-    else return 1.0 / factorial(n) + e(n - 1);
+    fact = 1;
+    sum = 1.0;
+    for (i = 1; i < n; i++) {
+        fact *= i;
+        sum += 1.0 / fact;
+    }
+    return sum;
 }
